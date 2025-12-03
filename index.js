@@ -24,7 +24,6 @@ app.get("/", (request, response) =>{
 })
 
 
-// ⭐⭐ LOGIN FUNCIONANDO ⭐⭐
 app.post("/login", (request, response) => {
     const { email, password } = request.body.user
 
@@ -65,7 +64,6 @@ app.post("/cadastrar", (request, response) =>{
 
         if (error){
 
-            // ⭐⭐ FUNCIONA EM TODAS AS VERSÕES ⭐⭐
             if (error.code === "ER_DUP_ENTRY" || error.errno === 1062) {
                 return response
                 .status(400)
